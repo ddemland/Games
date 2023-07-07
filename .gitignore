@@ -22,3 +22,10 @@
 /Othello/OthelloDesktop/bin
 /Othello/OthelloDesktop/obj
 /Othello/OthelloDesktop/*.user
+/TicTacToe/.vs/TicTacToe
+/TicTacToe/TicTacToe.Console/bin/Debug/net6.0
+/TicTacToe/TicTacToe.Console/obj
+/TicTacToe/TicTacToe.Library/bin/Debug/net6.0
+/TicTacToe/TicTacToe.Library/obj
+/TicTacToe/TicTacToe.Tests/bin/Debug/net6.0
+/TicTacToe/TicTacToe.Tests/obj
