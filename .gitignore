@@ -32,3 +32,5 @@
 /TicTacToe/.vs/ProjectEvaluation
 /TicTacToe/TicTacToe.AIPlayer/bin/Debug/net6.0
 /TicTacToe/TicTacToe.AIPlayer/obj
+/TicTacToe/TicTacToe.sln.DotSettings.user
+*.DotSettings
