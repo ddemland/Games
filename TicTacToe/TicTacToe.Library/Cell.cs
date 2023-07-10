@@ -7,7 +7,8 @@ namespace TicTacToe.Library
         {
             Open,
             Player1,
-            Player2
+            Player2,
+            Computer
         }
 
         public CellStates State { get; set; }

@@ -1,5 +1,4 @@
-﻿using System.IO.Compression;
-
+﻿
 namespace TicTacToe.Library
 {
     public class TicTacToe
@@ -8,7 +7,8 @@ namespace TicTacToe.Library
         {
             NoWinner,
             Player1,
-            Player2
+            Player2,
+            Computer
         }
 
         public const int BoardSize = 3;
@@ -109,12 +109,17 @@ namespace TicTacToe.Library
 
         public int OpenCells()
         {
+            return OpenCells(Board);
+        }
+
+        public static int OpenCells(Cell[,] board)
+        {
             var cnt = 0;
             for (var row = 0; row < TicTacToe.BoardSize; row++)
             {
-                for (int column = 0; column < TicTacToe.BoardSize; column++)
+                for (var column = 0; column < TicTacToe.BoardSize; column++)
                 {
-                    if (Board[row, column].State == Cell.CellStates.Open)
+                    if (board[row, column].State == Cell.CellStates.Open)
                     {
                         cnt ++;
                     }
@@ -130,6 +135,7 @@ namespace TicTacToe.Library
             {
                 Cell.CellStates.Player1 => WinStatus.Player1,
                 Cell.CellStates.Player2 => WinStatus.Player2,
+                Cell.CellStates.Computer => WinStatus.Computer,
                 _ => WinStatus.NoWinner
             };
         }

@@ -1,18 +1,29 @@
 ﻿
+
 var gameBoard = new TicTacToe.Library.TicTacToe();
 
-var isPlayer1 = true;
+var isPlayer1 = false;
 do
 {
     DisplayBoard(gameBoard);
 
     while (true)
     {
-        var displayStr = isPlayer1 ? "Player 1" : "Player 2";
+        int inputRow, inputColumn;
         var cellStat =
             isPlayer1 ? TicTacToe.Library.Cell.CellStates.Player1 :
-                            TicTacToe.Library.Cell.CellStates.Player2;
-        GetUserInput(out var inputRow, out var inputColumn, displayStr);
+                            TicTacToe.Library.Cell.CellStates.Computer;
+        if (isPlayer1)
+        {
+            GetUserInput(out inputRow, out inputColumn, "Player 1");
+        }
+        else
+        {
+            var aiCell = TicTacToe.AIPlayer.Player.GetAIPlacement(gameBoard.Board);
+            inputRow = aiCell.Row;
+            inputColumn = aiCell.Column;
+        }
+
         if (gameBoard.SetCellState(inputRow, inputColumn, cellStat))
         {
             break;
@@ -25,6 +36,29 @@ do
 } while ((gameBoard.GetWinStatus() == TicTacToe.Library.TicTacToe.WinStatus.NoWinner) &&
          (gameBoard.OpenCells() > 0));
 
+//do
+//{
+//    DisplayBoard(gameBoard);
+
+//    while (true)
+//    {
+//        var displayStr = isPlayer1 ? "Player 1" : "Player 2";
+//        var cellStat =
+//            isPlayer1 ? TicTacToe.Library.Cell.CellStates.Player1 :
+//                TicTacToe.Library.Cell.CellStates.Player2;
+//        GetUserInput(out var inputRow, out var inputColumn, displayStr);
+//        if (gameBoard.SetCellState(inputRow, inputColumn, cellStat))
+//        {
+//            break;
+//        }
+
+//        Console.WriteLine("That cell is already taken.");
+//    }
+
+//    isPlayer1 = !isPlayer1;
+//} while ((gameBoard.GetWinStatus() == TicTacToe.Library.TicTacToe.WinStatus.NoWinner) &&
+//         (gameBoard.OpenCells() > 0));
+
 DisplayBoard(gameBoard);
 switch (gameBoard.GetWinStatus())
 {
@@ -34,6 +68,10 @@ switch (gameBoard.GetWinStatus())
 
     case TicTacToe.Library.TicTacToe.WinStatus.Player2:
         Console.WriteLine("Player 2 Wins!!!!");
+        break;
+
+    case TicTacToe.Library.TicTacToe.WinStatus.Computer:
+        Console.WriteLine("Computer Wins!!!!");
         break;
 
     case TicTacToe.Library.TicTacToe.WinStatus.NoWinner:
@@ -67,6 +105,7 @@ string GetCellOutput(TicTacToe.Library.Cell cell)
     {
         TicTacToe.Library.Cell.CellStates.Player1 => "X",
         TicTacToe.Library.Cell.CellStates.Player2 => "O",
+        TicTacToe.Library.Cell.CellStates.Computer => "O",
         _ => " "
     };
 }
