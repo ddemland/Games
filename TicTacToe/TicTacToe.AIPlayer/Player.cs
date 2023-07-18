@@ -59,9 +59,9 @@ namespace TicTacToe.AIPlayer
             if (isMaximizing)
             {
                 var bestScore = int.MinValue;
-                for (var row = 0; row < Library.TicTacToe.BoardSize; row++)
+                for (var row = 0; row < Library.TicTacToe.BoardSize; row ++)
                 {
-                    for (var column = 0; column < Library.TicTacToe.BoardSize; column++)
+                    for (var column = 0; column < Library.TicTacToe.BoardSize; column ++)
                     {
                         if (currentBoard[row, column].State == Cell.CellStates.Open)
                         {
@@ -97,7 +97,7 @@ namespace TicTacToe.AIPlayer
         private static bool IsWinning(Cell[,] board, Library.Cell.CellStates player)
         {
             // Check rows
-            for (var row = 0; row < Library.TicTacToe.BoardSize; row++)
+            for (var row = 0; row < Library.TicTacToe.BoardSize; row ++)
             {
                 if ((board[row, 0].State == player) &&
                     (board[row, 1].State == player) &&
@@ -108,7 +108,7 @@ namespace TicTacToe.AIPlayer
             }
 
             // Check columns
-            for (var column = 0; column < Library.TicTacToe.BoardSize; column++)
+            for (var column = 0; column < Library.TicTacToe.BoardSize; column ++)
             {
                 if ((board[0, column].State == player) &&
                     (board[1, column].State == player) &&
