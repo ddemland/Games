@@ -109,7 +109,7 @@ namespace TicTacToe.GUI
                 MessageBox.Show("You Won !!!", "Tic Tac Toe",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(status == Library.TicTacToe.WinStatus.Computer)
+            else if (status == Library.TicTacToe.WinStatus.Computer)
             {
                 MessageBox.Show("Computer Won!!!", "Tic Tac Toe",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -150,22 +150,22 @@ namespace TicTacToe.GUI
                     break;
 
                 default:
-                {
-                    switch (column)
                     {
-                        case 0:
-                            Cell_2_0.Text = "O";
-                            break;
-                        case 1:
-                            Cell_2_1.Text = "O";
-                            break;
-                        default:
-                            Cell_2_2.Text = "O";
-                            break;
-                    }
+                        switch (column)
+                        {
+                            case 0:
+                                Cell_2_0.Text = "O";
+                                break;
+                            case 1:
+                                Cell_2_1.Text = "O";
+                                break;
+                            default:
+                                Cell_2_2.Text = "O";
+                                break;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
             }
         }
 
@@ -212,6 +212,12 @@ namespace TicTacToe.GUI
         private void Cell_2_2_Click(object sender, EventArgs e)
         {
             SetCellPlayerStatus(2, 2, Cell_2_2);
+        }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_game = new Library.TicTacToe();
+            InitGame();
         }
     }
 }

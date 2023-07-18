@@ -66,20 +66,21 @@
             // ComputerFirstMenu
             // 
             ComputerFirstMenu.Name = "ComputerFirstMenu";
-            ComputerFirstMenu.Size = new Size(153, 22);
+            ComputerFirstMenu.Size = new Size(180, 22);
             ComputerFirstMenu.Text = "Computer First";
             ComputerFirstMenu.Click += ComputerFirstMenu_Click;
             // 
             // newGameToolStripMenuItem
             // 
             newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            newGameToolStripMenuItem.Size = new Size(153, 22);
+            newGameToolStripMenuItem.Size = new Size(180, 22);
             newGameToolStripMenuItem.Text = "New Game";
+            newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(153, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
