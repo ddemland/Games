@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Tests", "TicTacTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.Console", "TicTacToe.Console\TicTacToe.Console.csproj", "{B7699C6B-EDB2-4E55-8FD3-7F7E1ADEA094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.AIPlayer", "TicTacToe.AIPlayer\TicTacToe.AIPlayer.csproj", "{0407FDB2-6C8C-4FD4-9BD2-230346C6DA20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe.AIPlayer", "TicTacToe.AIPlayer\TicTacToe.AIPlayer.csproj", "{0407FDB2-6C8C-4FD4-9BD2-230346C6DA20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.GUI", "TicTacToe.GUI\TicTacToe.GUI.csproj", "{D8CA052C-AD97-4CB7-BCA4-69BC318A52AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0407FDB2-6C8C-4FD4-9BD2-230346C6DA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0407FDB2-6C8C-4FD4-9BD2-230346C6DA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0407FDB2-6C8C-4FD4-9BD2-230346C6DA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CA052C-AD97-4CB7-BCA4-69BC318A52AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CA052C-AD97-4CB7-BCA4-69BC318A52AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CA052C-AD97-4CB7-BCA4-69BC318A52AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CA052C-AD97-4CB7-BCA4-69BC318A52AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
