@@ -612,5 +612,10 @@ namespace OthelloDesktop
         {
             Environment.Exit(0);
         }
+
+        private void ShowTurnOverBox_CheckedChanged(object sender, EventArgs e)
+        {
+            m_grid.ShowTurnOver = !m_grid.ShowTurnOver;
+        }
     }
 }
