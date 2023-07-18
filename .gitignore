@@ -34,3 +34,8 @@
 /TicTacToe/TicTacToe.AIPlayer/obj
 /TicTacToe/TicTacToe.sln.DotSettings.user
 *.DotSettings
+/Othello/.cr/personal/FavoritesList
+/TicTacToe/.cr/personal/FavoritesList
+/TicTacToe/TicTacToe.GUI/bin/Debug/net7.0-windows
+/TicTacToe/TicTacToe.GUI/obj
+*.user
