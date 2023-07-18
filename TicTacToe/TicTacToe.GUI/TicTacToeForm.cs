@@ -18,12 +18,30 @@ namespace TicTacToe.GUI
 
         private void TicTacToePanel_Paint(object sender, PaintEventArgs e)
         {
-            var surface = TicTacToePanel.CreateGraphics();
-            var pen = new Pen(Color.Black, 14);
-            surface.DrawLine(pen, 12, 100, 305, 100);
-            surface.DrawLine(pen, 12, 200, 305, 200);
-            surface.DrawLine(pen, 106, 9, 106, 296);
-            surface.DrawLine(pen, 207, 9, 207, 296);
+            var scaling = SystemScalingHelper.GetSystemScaling();
+            var surface = e.Graphics;
+            var pen = new Pen(Color.Black, (int)Math.Round(14 * scaling));
+
+            var panelWidth = TicTacToePanel.Width;
+            var panelHeight = TicTacToePanel.Height;
+
+            // Original unscaled points
+            var points = new Point[]
+            {
+                new Point((int)Math.Round((0.04 * panelWidth)), (int)Math.Round((0.33 * panelHeight))),
+                new Point((int)Math.Round((0.95 * panelWidth)), (int)Math.Round((0.33 * panelHeight))),
+                new Point((int)Math.Round((0.04 * panelWidth)), (int)Math.Round((0.66 * panelHeight))),
+                new Point((int)Math.Round((0.95 * panelWidth)), (int)Math.Round((0.66 * panelHeight))),
+                new Point((int)Math.Round((0.34 * panelWidth)), (int)Math.Round((0.03 * panelHeight))),
+                new Point((int)Math.Round((0.34 * panelWidth)), (int)Math.Round((0.97 * panelHeight))),
+                new Point((int)Math.Round((0.66 * panelWidth)), (int)Math.Round((0.03 * panelHeight))),
+                new Point((int)Math.Round((0.66 * panelWidth)), (int)Math.Round((0.97 * panelHeight)))
+            };
+
+            surface.DrawLine(pen, points[0], points[1]);
+            surface.DrawLine(pen, points[2], points[3]);
+            surface.DrawLine(pen, points[4], points[5]);
+            surface.DrawLine(pen, points[6], points[7]);
         }
 
         private void TicTacToeLoad(object sender, EventArgs e)
